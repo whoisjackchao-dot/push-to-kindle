@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* eink.css —— 针对 6 寸电子墨水屏的排版（Kindle + KOReader） */
+html, body { margin: 0; padding: 0; }
+/* 刻意不指定 font-family：把字体选择权交给阅读器（KOReader 的字体/字重设置才能生效）。
+   指定不存在的字体名会回退到细笔画衬线字体，在墨水屏上正文会显得发灰。 */
+body {
+  color: #000;
+  line-height: 1.65;
+  text-align: justify;
+  word-wrap: break-word;
+  padding: 0.3em 0.5em;
+}
+h1, h2, h3, h4 { line-height: 1.35; text-align: left; page-break-after: avoid; }
+h1 { font-size: 1.35em; margin: 0.8em 0 0.5em; }
+h2 { font-size: 1.18em; margin: 0.9em 0 0.45em; border-bottom: 1px solid #bbb; padding-bottom: 0.15em; }
+h3 { font-size: 1.06em; margin: 0.8em 0 0.35em; }
+h4 { font-size: 1.0em; margin: 0.7em 0 0.3em; }
+p { margin: 0.42em 0; text-indent: 0; }
+hr { border: 0; border-top: 1px solid #ccc; margin: 1em 0; }
+blockquote {
+  margin: 0.6em 0; padding: 0.35em 0.7em;
+  border-left: 3px solid #999; background: #f6f6f6;
+  font-size: 0.94em; color: #333;
+}
+blockquote p { margin: 0.25em 0; }
+code {
+  font-family: "DejaVu Sans Mono", monospace;
+  font-size: 0.88em; background: #f0f0f0; padding: 0 0.15em;
+}
+pre {
+  font-family: "DejaVu Sans Mono", monospace;
+  font-size: 0.78em; line-height: 1.4;
+  background: #f4f4f4; border: 1px solid #ddd;
+  padding: 0.45em 0.55em; margin: 0.6em 0;
+  white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word;
+}
+pre code { background: none; padding: 0; }
+ul, ol { margin: 0.4em 0 0.4em 1.1em; padding: 0; }
+li { margin: 0.22em 0; text-indent: 0; }
+table {
+  border-collapse: collapse; width: 100%;
+  margin: 0.6em 0; font-size: 0.78em; line-height: 1.4;
+  table-layout: fixed;
+}
+th, td {
+  border: 1px solid #aaa; padding: 0.22em 0.3em;
+  vertical-align: top; word-wrap: break-word; overflow-wrap: break-word;
+  text-align: left; text-indent: 0;
+}
+th { background: #ececec; font-weight: bold; }
+td.al-center, th.al-center { text-align: center; }
+td.al-right, th.al-right { text-align: right; }
+a { color: #0645ad; text-decoration: none; }
+.title-page { text-align: center; margin-top: 22%; }
+.title-page .t { font-size: 1.5em; font-weight: bold; line-height: 1.4; }
+.title-page .m { font-size: 0.9em; color: #555; margin-top: 2em; }
+

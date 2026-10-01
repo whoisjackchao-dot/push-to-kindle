@@ -1,0 +1,11 @@
+# 运行时产物，不入库
+pylib/
+out/
+_dev/
+backup/
+.pip-tmp/
+.tmp/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
